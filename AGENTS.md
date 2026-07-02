@@ -41,6 +41,8 @@
 - `leads/tests.py` exists but is empty — no tests written yet
 - Use `.\venv\Scripts\python.exe manage.py test leads` to run app tests
 
-## Git notes
-- Git repo root is `C:\Users\Diego Zamora` (home directory) — untracked clutter from outside `proyecto.py/` may appear in git status
-- No `.gitignore` exists
+## Git
+- Repo initialized in `proyecto.py/` with first commit already made
+- `.gitignore` excludes: `venv/`, `__pycache__/`, `*.pyc`, `db.sqlite3`, `staticfiles/`
+- Never commit `.env`, `db.sqlite3`, or `venv/` (already in `.gitignore`)
+- `.gitignore` also covers `proyecto.zip` and `primera_ventana/Roof_Repair.py` if desired
