@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <!-- Sección Principal (Hero) -->
+    <div class="hero">
+        <h1>Protege tu hogar con los mejores</h1>
+        <p>Especialistas en reparación de techos con más de 10 años de experiencia en el mercado estadounidense.</p>
+        <a href="{% url 'cotizar' %}" class="btn-hero">Solicita tu Cotización</a>
+    </div>
+
+    <!-- Sección de Servicios -->
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>🛠️ Reparación General</h3>
+            <p>Arreglo de filtraciones, goteras y daños estructurales en todo tipo de techos.</p>
+        </div>
+        <div class="service-card">
+            <h3>🔧 Mantenimiento</h3>
+            <p>Inspección y limpieza de canaletas para prolongar la vida útil de tu techo.</p>
+        </div>
+        <div class="service-card">
+            <h3>🚨 Emergencias 24/7</h3>
+            <p>Atención inmediata para daños causados por tormentas o accidentes.</p>
+        </div>
+    </div>
+{% endblock %}

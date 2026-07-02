@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Repair - {% block title %}Bienvenido{% endblock %}</title>
+    
+    <!-- Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- IMAGEN DEL TECHO -->
+            <div class="header-image">
+                <img src="{% static 'images/techo.jpg' %}" alt="Roof Repair - Reparación de Techos">
+            </div>
+            
+            <!-- BARRA DE NAVEGACIÓN COMPLETA -->
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1>🏠 Roof Repair</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Servicios ▼</a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'cotizar' %}">
+                                <span class="icon">📝</span> Solicitar Cotización
+                            </a>
+                            <a href="#">
+                                <span class="icon">🔧</span> Reparaciones
+                            </a>
+                            <a href="#">
+                                <span class="icon">🛡️</span> Mantenimiento
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <p class="header-subtitle">Especialistas en reparación de techos</p>
+        </header>
+
+        <main>
+            {% block content %}
+            <!-- Aquí irá el contenido de cada página -->
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Roof Repair - Todos los derechos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>

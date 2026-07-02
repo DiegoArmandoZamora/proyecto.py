@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Cotización{% endblock %}
+
+{% block content %}
+    <h2>Solicita tu Cotización</h2>
+    <p>Completa el formulario y te contactaremos a la brevedad.</p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="success-message">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar Cotización</button>
+    </form>
+
+    <a href="{% url 'home' %}" class="btn-back">← Volver al Inicio</a>
+{% endblock %}
