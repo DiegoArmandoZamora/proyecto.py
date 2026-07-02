@@ -1,7 +1,7 @@
 # AGENTS.md — Roof Repair (proyecto.py)
 
 ## Stack
-- Django 6.0.6, Python 3.x, SQLite, Pillow 12.2.0
+- Django 5.2.15, Python 3.x, SQLite, Pillow 11.0.0
 - Single app `leads/` (Lead model, LeadForm, cotizar view)
 - Deployed on PythonAnywhere (`ambar.pythonanywhere.com`)
 
@@ -20,7 +20,7 @@
   ```bash
   .\venv\Scripts\python.exe -m pip freeze > requirements.txt
   ```
-- Dependencies: Django, pillow, asgiref, sqlparse, tzdata
+- Dependencies: Django 5.2.15, pillow 11.0.0, asgiref, sqlparse, tzdata
 
 ## Project structure
 - `miprimerproyecto/` — Django project config (settings, urls, wsgi, asgi)
